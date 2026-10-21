@@ -12,6 +12,19 @@ through provider contracts and never hold a credential.
   <img alt="Agents, one repository each, reviewed on GitHub and installed into Plugboard, which everyone asks in one place; identity and warehouse systems sit behind contracts." src="https://raw.githubusercontent.com/plugboard-hq/plugboard/main/docs/images/overview-light.svg" width="100%">
 </picture>
 
+## How it all comes together
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/plugboard-hq/plugboard/main/docs/images/system-dark.svg">
+  <img alt="Agent repositories on the left, the Plugboard host in the middle (chat, supervisor, registry, capabilities, providers, console, organisations), connected systems on the right; one turn numbered through them." src="https://raw.githubusercontent.com/plugboard-hq/plugboard/main/docs/images/system-light.svg" width="100%">
+</picture>
+
+Teams own the agent repositories. The platform team runs one host and configures the
+connected systems once. The numbered turn is one question travelling through all three:
+a person asks, the supervisor routes to a skill agent, its capability calls the warehouse
+through a provider contract with the person's identity, the result is published, a second
+agent draws it, and a contributed pane opens in the chat.
+
 ## Who this is for
 
 Organisations with several departments or domains that want one assistant over their
