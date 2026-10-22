@@ -53,11 +53,11 @@ It is not a chatbot builder, and it is not a BI tool. It is the board those plug
 
 ## The core repositories
 
-Three repositories make the platform. Everything else here is an agent built on them.
+Four repositories make the platform. Everything else here is an agent built on them.
 
-### [plugboard](https://github.com/plugboard-hq/plugboard) — the host
+### [plugboard](https://github.com/plugboard-hq/plugboard) — the package
 
-The thing you run. A Django service and a React chat that together hold:
+Plugboard itself, `plugboard-ai` on PyPI. A Django service and a React chat that together hold:
 
 - **The supervisor.** Reads each message, picks the agent, chains agents when a job needs
   two, asks the person when something is unclear, and streams the whole turn to the screen
@@ -74,8 +74,7 @@ The thing you run. A Django service and a React chat that together hold:
 - **The console.** Agents, providers, organisations and branding, for whoever runs the
   installation.
 
-It has one built-in agent, Docs, as the example. Everything domain-specific lives
-elsewhere.
+Nothing domain-specific lives in it. What a company runs is an instance (below).
 
 ### [plugboard-sdk](https://github.com/plugboard-hq/plugboard-sdk) — the contract
 
@@ -99,6 +98,13 @@ rely on, and nothing more.
 The SDK's job, in one line: let an agent ship its own tools and its own UI without the
 host knowing it exists until it is installed. The host serves the SDK from its own tree and
 this repository is the published copy, so the two are always at the same version.
+
+### [plugboard-demo](https://github.com/plugboard-hq/plugboard-demo) — an instance
+
+What a company owns when it runs Plugboard: a `settings.py` naming the agents, the
+providers and the organisations, a `.env` with the model key, its data. No Plugboard code.
+This one hosts a roastery's data team and a hotel's guests; `uv run plugboard run` serves
+it. Copy it to make `acme-assistant`.
 
 ### [plugboard-agent-starter](https://github.com/plugboard-hq/plugboard-agent-starter) — the template
 
