@@ -124,4 +124,5 @@ Use [plugboard-agent-starter](https://github.com/plugboard-hq/plugboard-agent-st
 template. A skill agent is a page of markdown over the host's capabilities; a package agent
 is Python with its own tools and, if it needs one, its own pane. Both install into a host
 with a line in its environment. The decisions behind the design are in the host's
-[architecture decision records](https://github.com/plugboard-hq/plugboard/tree/main/docs/adr).
+[architecture decision records](https://github.com/plugboard-hq/plugboard/tree/main/docs/adr),
+and the words they use are in the [glossary](https://github.com/plugboard-hq/plugboard/blob/main/docs/GLOSSARY.md).
