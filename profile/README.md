@@ -99,7 +99,7 @@ The SDK's job, in one line: let an agent ship its own tools and its own UI witho
 host knowing it exists until it is installed. The host serves the SDK from its own tree and
 this repository is the published copy, so the two are always at the same version.
 
-### [plugboard-demo](https://github.com/plugboard-hq/plugboard-demo) — an instance
+### [plugboard-demo-airport-parking](https://github.com/plugboard-hq/plugboard-demo) — an instance
 
 What a company owns when it runs Plugboard: a `settings.py` naming the agents, the
 providers and the organisations, a `.env` with the model key, its data. No Plugboard code.
